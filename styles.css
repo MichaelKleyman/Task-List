@@ -1,0 +1,148 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --light: #eee;
+    --pink: #ec4A59;
+    --purple: #8b5cf6;
+    --gray: #6b7280;
+    --wheat: #f5deb3;
+    --azure: #F0FFFF;
+    --coral: #F08080;
+    --red: #D2691E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: wheat;
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+#new-task-form {
+    display: flex;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input {
+    flex: 1 1 0%;
+    background-color: var(--azure);
+    padding: 1rem;
+    border-radius: 30px;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
+#new-task-submit {
+    font-size: 1.125rem;
+    color: #374151;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--gray),
+    var(--coral));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+#new-task-submit:hover {
+    opacity: 0.3;
+}
+
+.task-list {
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 1.5;
+    margin-bottom: 1rem;
+}
+
+.task {
+    display: flex;
+    background-color: var(--light);
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.text {
+    flex: 1 1 0%;
+    color: brown;
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+}
+
+.text:not(:read-only) {
+    color: lightslategray;
+}
+
+.content {
+    flex: 1 1 0%;
+}
+
+.actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+button:hover {
+    opacity: 0.3;
+}
+
+.edit {
+    background-image: linear-gradient(to right, var(--gray),
+    var(--coral));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.delete {
+    background-image: linear-gradient(to right, var(--red),
+    var(--coral));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.checkbox {
+    display: inline-flex;
+}
